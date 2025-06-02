@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mindful Moments</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    />
+    <link rel="stylesheet" href="styles.css" />
+    <script type="module" crossorigin src="/mindful-moments/assets/index-C0oZn_M1.js"></script>
+    <link rel="stylesheet" crossorigin href="/mindful-moments/assets/index-CtWE6h6x.css">
+  </head>
+  <body>
+    <section id="hero" class="pb-20">
+      <div class="absolute inset-0 -z-10">
+        <div
+          class="w-full h-full bg-gradient-to-br from-pink-300 via-purple-400 to-orange-300 blur-3xl opacity-70 mix-blend-multiply"
+        ></div>
+      </div>
+      <header class="fixed top-0 inset-x-0">
+        <nav id="main-nav" class="p-5 flex justify-between items-center transition-all duration-300 relative">
+          <div class="logo">
+            <img src="logo.png" class="w-[75px]" alt="Logo" />
+          </div>
+          <button id="toggle-nav" class="text-2xl text-purple-600 md:hidden"><i class="fa-solid fa-bars"></i></button>
+          <ul class="nav-links md:flex gap-5 text-lg opacity-0 md:opacity-100 absolute md:relative top-25 md:top-0 transition-all duration-300 ease-in-out">
+            <li class="nav-item"><a href="/" class="nav-link">Home</a></li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Daily Boost</a>
+            </li>
+            <li class="nav-item">
+              <a href="/" class="nav-link">Guided Tips</a>
+            </li>
+            <li class="nav-item"><a href="/" class="nav-link">Contact</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="hero-content mt-40 flex flex-col items-center gap-3">
+        <h1 class="text-[min(10vw,60px)] text-center text-purple-500 pacifico-regular">
+          Your Moment Begins Now
+        </h1>
+        <p class="text-base text-white font-medium mt-5 text-center">
+          Breathe in clarity. Breathe out tension.
+        </p>
+        <button class="purple-btn mt-7">
+          Get Today's Moment
+          <i class="fa-solid fa-spa"></i>
+        </button>
+      </div>
+    </section>
+    <section id="body" class="bg-white flex flex-wrap">
+      <aside
+        class="sidebar bg-gradient-to-br from-purple-100 to-pink-100 pt-8 pb-8 pl-5 pr-5 max-md:w-full"
+      >
+        <ul class="tabs flex flex-col gap-6">
+          <li class="tab-item active-tab-item">
+            <a
+              class="tab-link text-lg font-medium flex items-center gap-3"
+              href="#"
+            >
+              <i class="fa-solid fa-calendar-day"></i> Daily
+            </a>
+          </li>
+          <li class="tab-item">
+            <a
+              class="tab-link text-lg font-medium flex items-center gap-3"
+              href="#"
+            >
+              <i class="fa-solid fa-heart"></i> Affirmations
+            </a>
+          </li>
+          <li class="tab-item">
+            <a
+              class="tab-link text-lg font-medium flex items-center gap-3"
+              href="#"
+            >
+              <i class="fa-solid fa-lungs"></i> Breathing Guide
+            </a>
+          </li>
+          <li class="tab-item">
+            <a
+              class="tab-link text-lg font-medium flex items-center gap-3"
+              href="#"
+            >
+              <i class="fa-solid fa-pen-fancy"></i> Journal
+            </a>
+          </li>
+        </ul>
+      </aside>
+      <div class="content flex-1 px-10 py-5 flex flex-col gap-20">
+        <h2 class="text-[min(6vw,40px)] pb-5 satisfy-regular">
+          Small Acts of self-kindness
+        </h2>
+        <div class="cards flex flex-wrap gap-6">
+          <div class="card flex-1 bg-orange-100">You are enough today.</div>
+          <div class="card flex-1 bg-green-100">
+            Drink a glass of water mindfully.
+          </div>
+          <div class="card flex-1 bg-purple-100">
+            Step outside and feel the wind for a minute.
+          </div>
+        </div>
+        <div class="c-faq flex gap-8 flex-wrap justify-center">
+          <div class="contact">
+            <h2 class="text-[min(6vw,40px)] pb-5 satisfy-regular">
+              Say Hello to your calm side
+            </h2>
+            <form class="flex flex-col gap-4 items-center">
+              <div class="relative w-[100%]">
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder=" "
+                  class="peer w-full px-4 pt-6 pb-2 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-400 transition placeholder-transparent caret-pink-500"
+                />
+                <label
+                  for="name"
+                  class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-500"
+                >
+                  Your Name
+                </label>
+              </div>
+              <div class="relative w-[100%]">
+                <textarea
+                  id="fav-moment"
+                  name="fav-moment"
+                  placeholder=" "
+                  rows="5"
+                  class="peer w-full px-4 pt-6 pb-2 border border-pink-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-pink-300 transition placeholder-transparent resize-none caret-pink-500"
+                ></textarea>
+                <label
+                  for="fav-moment"
+                  class="absolute left-4 top-2 text-gray-500 text-sm transition-all peer-placeholder-shown:top-4 peer-placeholder-shown:text-base peer-placeholder-shown:text-gray-400 peer-focus:top-2 peer-focus:text-sm peer-focus:text-gray-500"
+                >
+                  Your Favorite Moment
+                </label>
+              </div>
+              <button type="submit" class="purple-btn py-3">
+                🌸 Send My Moment
+              </button>
+            </form>
+          </div>
+          <div
+            class="faq bg-gradient-to-br from-purple-50 to-pink-50 rounded-4xl p-10"
+          >
+            <h2 class="text-[min(6vw,40px)] pb-5 satisfy-regular">
+              Why mindful moments?
+            </h2>
+            <div class="collection flex flex-col gap-4">
+              <button
+                class="faq-btn"
+                id="mf-m-1"
+              >
+                What's a mindful moment?
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button
+                class="faq-btn"
+                id="mf-m-2"
+              >
+                How can I stay consistent with wellness?
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+              <button
+                class="faq-btn"
+                id="mf-m-3"
+              >
+                Is this for mental health?
+                <i class="fa-solid fa-chevron-right"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+        <footer>
+          <h3 class="text-[min(6vw,36px)] pb-5 satisfy-regular text-pink-500">Be gentle with yourself today.</h3>
+          <h4 class="text-[min(4vw,20px)] pb-1 satisfy-regular text-pink-200">Even the moon needs rest to shine again.</h4>
+        </footer>
+      </div>
+    </section>
+    <div class="social-media fixed bottom-0 right-0 flex gap-5 m-5">
+      <a class="sm-btn" href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a class="sm-btn" href="#" aria-label="Twitter"><i class="fab fa-x-twitter"></i></a>
+      <a class="sm-btn" href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+    <div
+      id="modal-1"
+      class="modal fixed inset-0 z-50 flex justify-center items-center bg-black/70 backdrop-blur-xs opacity-0 pointer-events-none transition-opacity duration-300"
+    >
+      <div
+        class="bg-amber-50 max-w-300 rounded-4xl ring-4 ring-white inset-shadow-black/10 inset-shadow-sm"
+      >
+        <h1
+          class="modal-question text-black p-6 text-center text-2xl text-shadow-2xs satisfy-regular"
+        ></h1>
+        <h1 class="modal-message text-black p-6 text-center text-lg"></h1>
+      </div>
+    </div>
+  </body>
+</html>
