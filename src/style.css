@@ -1,0 +1,114 @@
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&family=Pacifico&family=Satisfy&display=swap");
+@import "tailwindcss";
+
+body {
+  background-color: rgb(228, 228, 228);
+}
+
+.pacifico-regular {
+  font-family: "Pacifico", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.indie-flower-regular {
+  font-family: "Indie Flower", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.satisfy-regular {
+  font-family: "Satisfy", cursive;
+  font-weight: 400;
+  font-style: normal;
+}
+
+@layer base {
+  ::-webkit-scrollbar {
+    @apply w-[12px] h-[12px];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-purple-300;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply border-purple-300 border-3 bg-purple-600 rounded-4xl;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    @apply bg-purple-800;
+  }
+}
+
+@layer components {
+  .purple-btn {
+    @apply bg-purple-400 rounded-xl text-white pl-3 pr-3 pt-2 pb-2 drop-shadow-2xl ring-2;
+    cursor: pointer;
+    animation: moveUp 6s infinite;
+    transition: all ease-in-out 0.4s;
+  }
+
+  .purple-btn:hover {
+    animation-play-state: paused;
+    box-shadow: 0 25px 50px -12px rgba(255, 192, 203, 0.8); /* pink shadow */
+  }
+
+  .nav-link {
+    @apply font-medium transition-all duration-300 relative;
+  }
+
+  .nav-link::after {
+    content: "";
+    @apply absolute w-0 h-1 bg-purple-600 -bottom-2 left-0 rounded-4xl transition-all duration-300;
+  }
+
+  .nav-link:hover {
+    @apply text-purple-800;
+  }
+
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .active-tab-item,
+  .tab-item:hover {
+    @apply bg-pink-200/60;
+  }
+
+  .tab-item {
+    @apply pt-3 pb-3 pl-4 pr-4 rounded-2xl transition-all duration-300;
+  }
+
+  .card {
+    @apply px-8 py-10 rounded-3xl text-3xl;
+    font-family: "Satisfy", cursive;
+    font-weight: 400;
+    font-style: normal;
+  }
+
+  .faq-btn {
+    @apply bg-white text-left px-6 py-3 rounded-2xl w-full cursor-pointer  flex justify-between items-center;
+  }
+
+  .sm-btn {
+    @apply transition-all duration-300 bg-violet-300 rounded-4xl aspect-square w-10 text-2xl flex justify-center items-center text-white ring-4 drop-shadow-xl;
+  }
+  .sm-btn:hover {
+    @apply bg-violet-500 ring-2 drop-shadow-2xl -translate-y-1;
+  }
+}
+
+@keyframes moveUp {
+  0% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
